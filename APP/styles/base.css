@@ -1,0 +1,20 @@
+* {
+    /* Colors */
+    --background: #E0EAFF;
+
+    /* Font */
+    --inter: 'Inter', sans-serif;
+    --nunito: 'Nunito', sans-serif;
+}
+
+html {
+    background-color: var(--background);
+}
+
+body {
+    max-width: 614px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+}
