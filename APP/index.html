@@ -79,29 +79,29 @@
             placeholder="Juanite"
           />
         </div>
-              <div class="halfFill">
-        <div class="mb-3">
-          <label for="inputEmail" class="form-label">Email *</label>
-          <span id="spanEmail" class="invisible alert alert-danger">
-            Invalid Email !</span
-          >
-          <input
-            type="email"
-            class="form-control emailFil"
-            id="inputEmail"
-            placeholder="foo@bar.com"
-          />
+        <div class="half-Fill">
+          <div class="mb-3 div-email">
+            <label for="inputEmail" class="form-label">Email *</label>
+            <span id="spanEmail" class="invisible alert alert-danger">
+              Invalid Email !</span
+            >
+            <input
+              type="email"
+              class="form-control emailFil"
+              id="inputEmail"
+              placeholder="foo@bar.com"
+            />
+          </div>
+          <div class="mb-3 div-phone">
+            <label for="inputPhone" class="form-label">Phone</label>
+            <input
+              type="number"
+              class="form-control phoneFil"
+              id="inputPhone"
+              placeholder="(83) 00000-0000"
+            />
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="inputPhone" class="form-label">Phone</label>
-          <input
-            type="number"
-            class="form-control phoneFil"
-            id="inputPhone"
-            placeholder="(83) 00000-0000"
-          />
-        </div>
-              </div>
         <label class="form-label" for="date">Birthday *</label>
         <span id="spanBirthday" class="invisible alert alert-danger">
           Invalid Birthday !</span
@@ -214,7 +214,7 @@
               <option value="1988">1988</option>
               <option value="1989">1989</option>
               <option value="1990">1990</option>
-              <option value="1991" selected>1991</option>
+              <option value="1991">1991</option>
               <option value="1992">1992</option>
               <option value="1993">1993</option>
               <option value="1994">1994</option>
@@ -261,7 +261,7 @@
           necessary to accept the terms</span
         >
       </form>
-      <div class="d-flex justify-content-between">
+      <div class="d-flex justify-content-between basic-next">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">
           Members
         </button>

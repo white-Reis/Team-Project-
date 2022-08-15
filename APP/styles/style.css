@@ -148,3 +148,20 @@ form {
   position: absolute;
   right: 0.5rem;
 }
+
+.half-Fill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-email {
+  width: 65%;
+}
+
+.div-phone {
+  width: 30%;
+}
+
+.basic-next {
+  margin-top: 3rem;
+}

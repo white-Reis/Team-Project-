@@ -1,6 +1,6 @@
 function testeValidSocial() {
   let expressaoLinkedin = new RegExp("http(s)?:\/\/([\w]+\.)?linkedin\.com\/in\/[A-z0-9_-]+\/?")
-  let expressaoGitHub = new RegExp("http(s)?:\/\/github\.com\/[A-z0-9_-]+\/?")
+  let expressaoGitHub = new RegExp("(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?github\.com\/[A-z0-9_-]+\/?")
   let expressaoUrl = new RegExp('^(https?|chrome)://[^s$.?#].[^s]*$')
   let correct = 0
 
