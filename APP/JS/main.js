@@ -2,7 +2,7 @@ var Storage = localStorage;
 var peoples = []
 
 //nav
-navBasic.addEventListener('click',() => {flagPage=1,pagination(),console.log()}) 
+navBasic.addEventListener('click',() => {flagPage=1,pagination(),console.log()})
 navSocial.addEventListener('click',() =>  {testeValid()})
 navCertificate.addEventListener('click',() => { testeValid() ,progess >2?testeValidSocial():testeValid()})   
 
@@ -30,7 +30,7 @@ function membersList () {
     liAge.textContent = `Age: ${element.age}`
     liLinkedin.textContent =`LinkedIn: ${element.social[0]}`
     liGithub.textContent =`GitHub: ${element.social[1]}`
-    liGraduation.textContent =`Graduation: ${element.graduation} `
+    liGraduation.textContent =`Graduation: ${element.graduation}`
 
     ulMembers.appendChild(liName)
     ulMembers.appendChild(liAge)

@@ -20,6 +20,7 @@ page2 = value => (document.querySelector('#social').style.display = value)
 page3 = value => (document.querySelector('#certificates').style.display = value)
 
 function pagination() {
+  showLocal()
   page1(flagPage == 1 ? 'block' : 'none')
   page2(flagPage == 2 ? 'block' : 'none')
   page3(flagPage == 3 ? 'block' : 'none')

@@ -107,18 +107,19 @@ function finish(){
 
 
   if (correct == 3){
-    let people = new People ($('#inputFullName').value,
-    $('#inputNickName').value,
-    $('#inputEmail').value,
-    $('#inputPhone').value,
-    `${$('#inputDay').value}-${$('#inputMonth').value}-${$('#inputYear').value}`,
-    $('#age').textContent,
-    $('#inputLinkedin').value,
-    $('#inputGitHub').value,
-    arrayCertificates,
-    $('#inputTeamName').value,
-    $('#inputInstitution').value,
-    $('#inputGraduation').value
+    let people = new People (
+      $('#inputFullName').value,
+      $('#inputNickName').value,
+      $('#inputEmail').value,
+      $('#inputPhone').value,
+      `${$('#inputDay').value}-${$('#inputMonth').value}-${$('#inputYear').value}`,
+      $('#age').textContent,
+      $('#inputLinkedin').value,
+      $('#inputGitHub').value,
+      arrayCertificates,
+      $('#inputTeamName').value,
+      $('#inputInstitution').value,
+      $('#inputGraduation').value
     )
     peoples.push(people)
     membersList()
