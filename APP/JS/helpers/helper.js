@@ -51,9 +51,10 @@ function cleamPage(){
     $('#inputNickName').value=''
     $('#inputEmail').value=''
     $('#inputPhone').value=''
-    $('#inputDay').value= 1
-    $('#inputMonth').value=1
-    $('#inputYear').value =1991
+    $('#inputDay').value= '--'
+    $('#inputMonth').value= '--'
+    $('#inputYear').value = '--'
+    $('#age').textContent = '--'
     $('#inputLinkedin').value=''
     $('#inputGitHub').value=''
     $('#certificateList').innerHTML = ''
@@ -65,4 +66,5 @@ function cleamPage(){
     progess = 1
     flagPage = 1
     checkTerm =0
+    localStorage.clear()
 }
