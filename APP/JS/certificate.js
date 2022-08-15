@@ -1,12 +1,26 @@
 let certificatesUl = $('#certificateList')
 
 let arrayCertificates = []
-let maxNumber = 0 
 
 $('#addCertificate').addEventListener('click', function () {
   if ($('#inputCertificateList').value.length > 10 & $('#inputCertificateList').value.length < 48 ){
-  maxNumber <= 4 ?  createCertificate() : alert('certificate limit reached')
-  maxNumber++}
+  arrayCertificates.length <= 4 ?  createCertificate() : alert('certificate limit reached')
+
+  let trashIcons = document.querySelectorAll('.trashIcon')
+    trashIcons.forEach(n => {
+      n.addEventListener('click',(element)=> { 
+      element.target.parentNode.remove()
+      let chest = []
+      arrayCertificates.forEach(item => {
+        element.target.parentNode.textContent != item.liContent && chest.push(item)
+      }) 
+      arrayCertificates = []
+      chest.forEach (item => {
+        arrayCertificates.push(item)
+      })
+     })
+    })
+  }
 })  
 
 function createCertificate(){
@@ -15,22 +29,29 @@ function createCertificate(){
   createArray()
 
   arrayCertificates.forEach(element => { 
-  
+    
     let li=document.createElement('li')
-    li.classList.add('form-control', 'new-li')
+
+    let trash = document.createElement('img')
+    trash.setAttribute('src','/APP/images/trash.svg')
+    trash.classList.add('trashIcon')
+    let favoriteLi = document.createElement('img')
+    favoriteLi.setAttribute('src','/APP/images/heart.svg')
+    favoriteLi.classList.add('blue-heart','heartIcon')
+    
     li.innerHTML = element.liContent
-    li.setAttribute('id','li'+maxNumber)
+    element.checked === true && li.appendChild(favoriteLi)
+    li.appendChild(trash)
+    li.classList.add('form-control', 'new-li')
     li.classList.add('form-control')
     li.classList.add('new-li')
     certificatesUl.appendChild(li)
     $('#inputCertificateList').value= ''
+   
   });
 }
 
-function firstItem(item){
-  $('#inputHeart').checked = false  
-  arrayCertificates.unshift(item)
-}
+ 
 
 function addClass() {
   $('.img-heart').classList.add('blue-heart')
@@ -44,6 +65,11 @@ function removeClass() {
 $('#inputHeart').addEventListener('click', () => {
   $('#inputHeart').checked == true ? addClass() : removeClass()
 })
+
+function firstItem(item){
+  $('#inputHeart').checked = false  
+  arrayCertificates.unshift(item)
+}
 
 function createArray(){
   let checkFavorite= $('#inputHeart')

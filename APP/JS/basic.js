@@ -47,26 +47,8 @@ function testeValid() {
   }
   setInterval((correct == 4 ? submitBasic.classList.remove('btn-danger') : submitBasic.classList.add('btn-danger')),1000)
   correct == 4 ? (flagPage = 2) : (flagPage = 1)
-  correct == 4 ? basicCorrect() : console.log('ha ' + (correct - 4) + ' erros')
   correct == 4 ? progess+=1 : progess= progess
   correct < 4 ? progess=1 : progess= progess
   
   pagination()
-}
-
-////////////////////////////////////////////////
-function basicCorrect() {
-  let spanName = document.getElementById('spanName')
-  spanName.classList.add('invisible')
-  let spanEmail = document.getElementById('spanEmail')
-  spanEmail.classList.add('invisible')
-  let spanBirthday = document.getElementById('spanBirthday')
-  spanBirthday.classList.add('invisible')
-  let spanTerms = document.getElementById('spanTerms')
-  spanTerms.classList.add('invisible')
-  let spanLinkedin = document.getElementById('spanLinkedin')
-  spanLinkedin.classList.add('invisible')
-  let spanGitHub = document.getElementById('spanGitHub')
-    spanGitHub.classList.add('invisible')
-
 }

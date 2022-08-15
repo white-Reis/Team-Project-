@@ -23,6 +23,5 @@ function testeValidSocial() {
 
   setInterval((correct == 1 ? submitSocial.classList.remove('btn-danger') : submitSocial.classList.add('btn-danger')),1000)
   correct == 1 ? (flagPage = 3) : (flagPage = 2)
-  correct == 1 ? basicCorrect() : {}
   pagination()
 }

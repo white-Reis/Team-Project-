@@ -1,14 +1,7 @@
 * {
-    /* Colors */
-    --background: #E0EAFF;
-
     /* Font */
     --inter: 'Inter', sans-serif;
     --nunito: 'Nunito', sans-serif;
-}
-
-html {
-    background-color: var(--background);
 }
 
 body {

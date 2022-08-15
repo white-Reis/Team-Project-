@@ -60,15 +60,15 @@
       <form>
         <div class="mb-3">
           <label for="inputFullName" class="form-label">Full Name *</label>
+          <input
+          type="text"
+          class="form-control"
+          id="inputFullName"
+          placeholder="Foo Bar"
+          />
           <span id="spanName" class="invisible alert alert-danger">
             Invalid Name !</span
           >
-          <input
-            type="text"
-            class="form-control"
-            id="inputFullName"
-            placeholder="Foo Bar"
-          />
         </div>
         <div class="mb-3">
           <label for="inputNickName" class="form-label">NickName</label>
@@ -82,26 +82,27 @@
         <div class="half-Fill">
           <div class="mb-3 div-email">
             <label for="inputEmail" class="form-label">Email *</label>
+            <input
+            type="email"
+            class="form-control emailFil"
+            id="inputEmail"
+            placeholder="foo@bar.com"
+            />
             <span id="spanEmail" class="invisible alert alert-danger">
               Invalid Email !</span
             >
-            <input
-              type="email"
-              class="form-control emailFil"
-              id="inputEmail"
-              placeholder="foo@bar.com"
-            />
           </div>
           <div class="mb-3 div-phone">
             <label for="inputPhone" class="form-label">Phone</label>
             <input
-              type="number"
-              class="form-control phoneFil"
-              id="inputPhone"
-              placeholder="(83) 00000-0000"
+            type="number"
+            class="form-control phoneFil"
+            id="inputPhone"
+            placeholder="(83) 00000-0000"
             />
           </div>
         </div>
+        
         <label class="form-label" for="date">Birthday *</label>
         <span id="spanBirthday" class="invisible alert alert-danger">
           Invalid Birthday !</span
@@ -110,7 +111,8 @@
           <div>
             <label class="form-label" for="inputDay">Day</label>
             <select class="selectDate" id="inputDay">
-              <option value="1" selected>01</option>
+              <option value="" selected>--</option>
+              <option value="1">01</option>
               <option value="2">02</option>
               <option value="3">03</option>
               <option value="4">04</option>
@@ -146,7 +148,8 @@
           <div>
             <label class="form-label" for="inputMonth">Month</label>
             <select class="selectDate" id="inputMonth">
-              <option value="1" selected>01</option>
+              <option value="0" selected>--</option>
+              <option value="1">01</option>
               <option value="2">02</option>
               <option value="3">03</option>
               <option value="4">04</option>
@@ -163,6 +166,7 @@
           <div>
             <label class="form-label" for="inputYear">Year</label>
             <select class="selectDate" id="inputYear" name="year">
+              <option value=""selected>--</option>
               <option value="1940">1940</option>
               <option value="1941">1941</option>
               <option value="1942">1942</option>
@@ -250,17 +254,17 @@
           </div>
           <div>
             <label class="form-label" for="age">Age</label>
-            <span class="form-control selectDate" id="age"></span>
+            <span class="form-control selectDate" id="age">--</span>
           </div>
         </div>
         <input id="terms" class="checkBox" type="checkbox" />
         <label class="form-label" id="label-terms" for="terms"
           >I Accept the terms and privacy</label
         >
-        <span id="spanTerms" class="invisible alert alert-danger">
-          necessary to accept the terms</span
-        >
       </form>
+      <span id="spanTerms" class="invisible alert alert-danger">
+        necessary to accept the terms</span
+      >
       <div class="d-flex justify-content-between basic-next">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">
           Members
@@ -274,9 +278,6 @@
     <section id="social">
       <div class="mb-3">
         <label for="inputLinkedin" class="form-label">LinkedIn</label>
-        <span id="spanLinkedin" class="invisible alert alert-danger"
-          >Invalid LinkedIn !</span
-        >
         <input
           type="text"
           class="form-control"
@@ -286,15 +287,15 @@
       </div>
       <div class="mb-3">
         <label for="inputGitHub" class="form-label">Github *</label>
+        <input
+        type="text"
+        class="form-control"
+        id="inputGitHub"
+        placeholder="https://github.com/foobar"
+        />
         <span id="spanGitHub" class="invisible alert alert-danger"
           >Invalid GitHub !</span
         >
-        <input
-          type="text"
-          class="form-control"
-          id="inputGitHub"
-          placeholder="https://github.com/foobar"
-        />
       </div>
       <div class="d-flex justify-content-end social-next">
         <button id="submitSocial" type="submit" class="btn btn-primary">
@@ -330,39 +331,39 @@
         
       <div class="mb-3 labelTeam" >
         <label for="inputTeamName" class="form-label">Team Name *</label>
+        <input
+        type="text"
+        class="form-control"
+        id="inputTeamName"
+        placeholder="TeamCompass"
+        />
         <span id="spanTeamName" class="invisible alert alert-danger">
           Invalid TeamName !</span
         >
-        <input
-          type="text"
-          class="form-control"
-          id="inputTeamName"
-          placeholder="TeamCompass"
-        />
       </div>
       <div class="mb-3" >
         <label for="inputInstitution" class="form-label">Institution *</label>
+        <input
+        type="text"
+        class="form-control"
+        id="inputInstitution"
+        placeholder="Universidade Federal da Paraíba"
+        />
         <span id="spanInstitution" class="invisible alert alert-danger">
           Invalid Institution !</span
         >
-        <input
-          type="text"
-          class="form-control"
-          id="inputInstitution"
-          placeholder="Universidade Federal da Paraíba"
-        />
       </div>
       <div class="mb-3">
         <label for="inputGraduation" class="form-label">Graduation *</label>
+        <input
+        type="text"
+        class="form-control"
+        id="inputGraduation"
+        placeholder="Ciências da Computação"
+        />
         <span id="spanGruduation" class="invisible alert alert-danger">
           Invalid Graduation !</span
         >
-        <input
-          type="text"
-          class="form-control"
-          id="inputGraduation"
-          placeholder="Ciências da Computação"
-        />
       </div>
       <div class="d-flex justify-content-end">
         <button id="finish" type="submit" class="btn btn-primary">
