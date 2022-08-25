@@ -9,7 +9,7 @@ let submitBasic = $('#submitBasic')
 let submitSocial = $('#submitSocial')
 //flag page
 var flagPage = 1
-var progess = 1
+var progress = 1
 //flag dos termos
 var checkTerm = 0
 
@@ -63,7 +63,7 @@ function cleamPage(){
     $('#inputInstitution').value=''
     $('#inputGraduation').value=''
     $('#terms').checked= false;
-    progess = 1
+    progress = 1
     flagPage = 1
     checkTerm =0
     localStorage.clear()

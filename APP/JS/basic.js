@@ -47,8 +47,8 @@ function testeValid() {
   }
   setInterval((correct == 4 ? submitBasic.classList.remove('btn-danger') : submitBasic.classList.add('btn-danger')),1000)
   correct == 4 ? (flagPage = 2) : (flagPage = 1)
-  correct == 4 ? progess+=1 : progess= progess
-  correct < 4 ? progess=1 : progess= progess
+  correct == 4 ? progress+=1 : progress= progress
+  correct < 4 ? progress=1 : progress= progress
   
   pagination()
 }
